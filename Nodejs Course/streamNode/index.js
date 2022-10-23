@@ -16,13 +16,17 @@ server.on("request", (req, res) => {
     // Reading from a stream
     // Handle from events ----> data, end ,error
 
+    // const rsStream = fs.createReadStream('input.txt');
+    // rsStream.on('data', (chunkData) => {
+    //     res.write(chunkData);
+    // });
+    // rsStream.on('end', () => {
+    //     res.end();
+    // });
+
+    // 3rd Way
     const rsStream = fs.createReadStream('input.txt');
-    rsStream.on('data', (chunkData) => {
-        res.write(chunkData);
-    });
-    rsStream.on('end', () => {
-        res.end();
-    });
+    rsStream.pipe(res);
 
 
 });
