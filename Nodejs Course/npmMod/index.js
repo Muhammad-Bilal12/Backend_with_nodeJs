@@ -9,6 +9,6 @@ const validator = require("validator");
 // console.log(chalk.yellow.inverse("Warn"));
 
 
-var res = validator.isEmail("bilal@gmail.com");
+var res = validator.isEmail("bilalgmail.com");
 
 console.log(res ? chalk.green.inverse(res) : chalk.red.inverse(res));
