@@ -22,7 +22,7 @@
 
 
 const http = require("http");
-const { type } = require("os");
+
 
 const server = http.createServer((req, res) => {
     // console.log(req.url);
